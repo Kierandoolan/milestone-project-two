@@ -1,3 +1,18 @@
+/* --------- Global style */
+*
+
 body {
-    background-color: brown;
+    background:radial-gradient(white,#C30F16);
+    font-family: 'Mystery Quest', cursive;
+    color: #146B3A;
+    text-align: center;
+    min-height: 100vh;
+}
+
+p {
+    font-size: 30px;
+    }
+
+.heading {
+    font-size:  60px;
 }
