@@ -16,3 +16,28 @@ p {
 .heading {
     font-size:  60px;
 }
+
+.container {
+    display:grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 20px;
+    justify-content: center;
+
+
+}
+.deck {
+    position: relative;
+    height:150px;
+    width: 100px;
+    
+    
+}
+
+.christmas-card {
+    position:absolute;
+    width: 100px;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+}
