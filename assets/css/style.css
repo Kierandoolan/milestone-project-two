@@ -1,5 +1,9 @@
 /* --------- Global style */
-*
+* {
+margin: 0;
+padding: 0;
+box-sizing:border-box;
+ }
 
 body {
     background:radial-gradient(white,#C30F16);
@@ -19,7 +23,7 @@ p {
 
 .container {
     display:grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, auto );
     grid-gap: 20px;
     justify-content: center;
 
@@ -27,17 +31,33 @@ p {
 }
 .deck {
     position: relative;
-    height:150px;
-    width: 100px;
+    height:110px;
+    width: 90px;
     
     
 }
 
 .christmas-card {
     position:absolute;
-    width: 100px;
-    height: 150px;
+    width: 90px;
+    height: 110px;
     justify-content: center;
     align-items: center;
     border-radius: 10%;
 }
+
+.value {
+    position:absolute;
+    width: 90px;
+    height: 110px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    transform: scale(.9);
+    transition: transform 100ms ease-in-out;
+  }
+  
+  .deck-front:hover .value {
+    transform: scale(1);
+  }
+
