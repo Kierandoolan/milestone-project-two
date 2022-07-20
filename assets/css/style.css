@@ -22,11 +22,12 @@ p {
 }
 
 .container {
+    margin:auto;
     display:grid;
     grid-template-columns: repeat(4, auto );
     grid-gap: 20px;
     justify-content: center;
-
+    perspective: 500px;
 
 }
 .deck {
@@ -44,9 +45,23 @@ p {
     justify-content: center;
     align-items: center;
     border-radius: 10%;
+    transform: rotateY(180deg);
+
+
 }
 
+.deck.visible .christmas-card {
+    transform: rotateY(-180deg); 
+  }
+  
+.deck.visible .value {
+    transform: rotateY(0); 
+  }
+
+  
+  
 .value {
+    background-color:red ;
     position:absolute;
     width: 90px;
     height: 110px;
@@ -55,7 +70,13 @@ p {
     border-radius: 10%;
     transform: scale(.9);
     transition: transform 100ms ease-in-out;
+    transform: rotateY(-180deg);
+    backface-visibility: hidden;
+    transition: transform 600ms ease-in-out;
+
+    
   }
+  
   
   .deck-front:hover .value {
     transform: scale(1);
