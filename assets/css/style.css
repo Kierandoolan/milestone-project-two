@@ -1,84 +1,83 @@
 /* --------- Global style */
 * {
-margin: 0;
-padding: 0;
-box-sizing:border-box;
- }
-
-body {
-    background:radial-gradient(white,#C30F16);
-    font-family: 'Mystery Quest', cursive;
-    color: #146B3A;
-    text-align: center;
-    min-height: 100vh;
-}
-
-p {
-    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+     }
+    
+    body {
+        background:radial-gradient(white,#C30F16);
+        font-family: 'Mystery Quest', cursive;
+        color: #146B3A;
+        text-align: center;
+        min-height: 100vh;
     }
-
-.heading {
-    font-size:  60px;
-}
-
-.container {
-    margin:auto;
-    display:grid;
-    grid-template-columns: repeat(4, auto );
-    grid-gap: 20px;
-    justify-content: center;
-    perspective: 500px;
-
-}
-.deck {
-    position: relative;
-    height:110px;
-    width: 90px;
+    
+    p {
+        font-size: 30px;
+        }
+    
+    .heading {
+        font-size:  60px;
+    }
+    
+    .container {
+        margin:auto;
+        display:grid;
+        grid-template-columns: repeat(4, auto );
+        grid-gap: 20px;
+        justify-content: center;
+        perspective: 500px;
+    
+    }
+    .deck {
+        position: relative;
+        height:110px;
+        width: 90px;
+        
+        
+    }
+    
+    .christmas-card {
+        position:absolute;
+        width: 90px;
+        height: 110px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10%;
+        transform: rotateY(180deg);
     
     
-}
-
-.christmas-card {
-    position:absolute;
-    width: 90px;
-    height: 110px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10%;
-    transform: rotateY(180deg);
-
-
-}
-
-.deck.visible .christmas-card {
-    transform: rotateY(-180deg); 
-  }
-  
-.deck.visible .value {
-    transform: rotateY(0); 
-  }
-
-  
-  
-.value {
-    background-color:red ;
-    position:absolute;
-    width: 90px;
-    height: 110px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10%;
-    transform: scale(.9);
-    transition: transform 100ms ease-in-out;
-    transform: rotateY(-180deg);
-    backface-visibility: hidden;
-    transition: transform 600ms ease-in-out;
-
+    }
     
-  }
-  
-  
-  .deck-front:hover .value {
-    transform: scale(1);
-  }
-
+    .deck:hover .christmas-card {
+        transform: rotateY(-180deg); 
+      }
+      
+    .deck:hover .value {
+        transform: rotateY(0); 
+      }
+    
+      
+      
+    .value {
+        background-color:red ;
+        position:absolute;
+        width: 90px;
+        height: 110px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10%;
+        transform: scale(.9);
+        transition: transform 100ms ease-in-out;
+        transform: rotateY(-180deg);
+        backface-visibility: hidden;
+        transition: transform 600ms ease-in-out;
+    
+        
+      }
+      
+      
+      .front-view:hover .value {
+        transform: scale(1);
+      }
